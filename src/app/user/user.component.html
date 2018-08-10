@@ -1,0 +1,74 @@
+<div class="row"> 
+    <div class="col-md-12">
+        <div class="col-md-3">
+            
+            <div class="vertical-menu" >
+               
+                <a routerLink="/user" routerLinkActive="active" id="bttn" ><i class="glyphicon glyphicon-check"></i> Profile</a><br>
+                <a routerLink="/customer" routerLinkActive="active" id="bttn1"> <i class="glyphicon glyphicon-user"></i> Customers</a><br>
+                <a routerLink="/serviceticket" routerLinkActive="active" id="bttn2"> <i class="fa fa-institution"></i>  Backlog Tickets</a><br>
+                <a routerLink="/viewService" routerLinkActive="active" id="bttn2"> <i class="fa fa-institution"></i>  Solved Tickets</a><br>
+                <a routerLink="/logout" routerLinkActive="active" id="bttn3" ><i class="glyphicon glyphicon-log-out"></i> logout</a><br>
+            </div>
+        
+        </div>
+        
+        <div class="col-md-4" *ngIf="adminDetails">
+            
+            <ul class="tabs " >
+              
+                <li class="tab ">
+                    <input type="radio" name="tabs" checked="checked" id="tab1" />
+                       <label for="tab1">Profile</label>
+                            <div id="tab-content1" class="content ">
+                            
+                                <div class="panel panel-default" >
+                                    
+                                    <div class="panel-heading ">
+                                    <h3 class="panel-title">Profile</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                     <div class="row">
+                                        <div class="col-md-12"></div>   
+                                            <div class="row">
+                                                 
+                                                <div class="col-md-9">
+                                                    <table  class="table table-hover table-bordered" *ngFor="let details of adminDetails">
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td>{{details.name}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>DOB</td>
+                                                            <td>{{details.dob}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Gender</td>
+                                                            <td>{{details.gender}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Mail</td>
+                                                            <td>{{details.email}}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Education</td>
+                                                            <td>{{details.education}}</td>              
+                                                        </tr>
+                                                    </table>     
+                                                </div>    
+                                            </div>           
+                                        </div>    
+                                        </div>
+                                    </div>
+                           </div>
+                        </li>
+                        </ul>
+                        </div>
+                        
+              
+                      
+                      
+                      
+                       
+                        
+               
