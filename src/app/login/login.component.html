@@ -27,21 +27,20 @@
             </div>
     
         <h4>Password  <i  style="color: red;">*</i></h4>
-        <input style="padding: 6px;height: 30px;width: 10cm;color:black;border-radius: 20px" type="password" name="password" placeholder="password" pattern= "^\d{4}$" #password = "ngModel" [class.is-invalid]="password.is-invalid && password.touched"  [(ngModel)]="user.password"> 
+        <input class="box" style="padding: 6px;height: 30px;width: 10cm;color:black;border-radius: 20px" type="password" name="password" placeholder="password" pattern= "^\d{4}$" #password = "ngModel" [class.is-invalid]="password.is-invalid && password.touched"  [(ngModel)]="user.password"> 
       
     
         <h4>Education Details</h4>
-        <select placeholder = "education" #option = "ngModel" (blur) = "validate(option.value)" (change) = "validate(option.value)" [class.is-invalid]="optionHasError && option.touched" class = "custom-select" name = "option" [(ngModel)]="user.education">
-        <option value="default">Select</option>    
+        <select id="soflow-color" #option = "ngModel" (blur) = "validate(option.value)" (change) = "validate(option.value)" [class.is-invalid]="optionHasError && option.touched" class = "custom-select" name = "option" [(ngModel)]="user.education">
+        <option>Select</option>    
         <option value="M.tech">M.TECH</option>
         <option value="MBA">MBA</option>
         <option value="B.TECH">B.TECH</option>
         </select>
 
         <br><br>
-        
 				
-				<button [disabled]="loginForm.form.invalid" type="submit" style=" margin:auto; display:block;" class="btn btn-success col-xs-8 col-md-8 a">Submit</button>
+				<button  type="submit" style=" margin:auto; display:block;" class="btn btn-success col-xs-8 col-md-8 a">Submit</button>
     
    </div> </div>
  

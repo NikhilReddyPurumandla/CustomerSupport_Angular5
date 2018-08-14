@@ -16,7 +16,7 @@ import { ViewServiceComponent } from './view-service/view-service.component';
 import { UserComponent } from './user/user.component';
 import { CustomerComponent } from './customer/customer.component';
 import { DataTablesModule } from 'angular-datatables';
-
+import { ChartsModule } from 'ng2-charts'
 
 
 const routes: Routes = [
@@ -81,7 +81,8 @@ const routes: Routes = [
     HttpClientModule,
     HttpModule,
     RouterModule.forRoot(routes),
-    DataTablesModule
+    DataTablesModule,
+    ChartsModule
   ],
   providers: [CustomerService,CanActivateAuthGuard, AuthenticationService],
   bootstrap: [AppComponent]

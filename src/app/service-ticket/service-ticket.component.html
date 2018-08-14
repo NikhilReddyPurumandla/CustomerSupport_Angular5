@@ -51,10 +51,10 @@
                     <button type="button" class="w3-button w3-display-topright" onclick="document.getElementById('id01').style.display='none'"  style="margin-left: 5cm;color:red ">&times;</button>       
     
                         <div class="col-xs-2 col-md-2"> 
-            <h4>Update {{ticketDetailsById.id}}</h4>
+            <h4>Update Ticket: {{ticketDetailsById.id}}</h4>
             
            <h5>Status Update</h5>
-           <select name=status value ="Update Status"[(ngModel)]="ticketDetailsById.status">
+           <select id="soflow-color" name=status value ="Update Status"[(ngModel)]="ticketDetailsById.status">
               <option value=verified>Verified</option>
               <option value=InProgress>InProgress</option>
               <option value=closed>closed</option>

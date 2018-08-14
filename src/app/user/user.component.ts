@@ -10,9 +10,12 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class UserComponent implements OnInit {
 
   adminDetails:any;
- 
+
   constructor(private route: ActivatedRoute,
-    private router: Router,private customerService : CustomerService) { }
+    private router: Router,private customerService : CustomerService) {
+    
+     
+     }
 
   ngOnInit() {
     
@@ -24,5 +27,6 @@ details = this.customerService.getAdminDetails()
  this.adminDetails=data;
  console.log(this.adminDetails);
 })
+
 
 }
