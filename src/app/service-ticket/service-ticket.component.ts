@@ -39,7 +39,7 @@ export class ServiceTicketComponent implements OnInit {
     console.log("updating: "+this.ticketDetailsById.id)
     this.customerService.updateServiceTicketStatus(this.ticketDetailsById)
     .subscribe(
-      data => console.log("success!", data),
+      data => document.location.reload(false) ,
       error => this.errorMessage = error.StatusText
     )
   }
@@ -51,7 +51,7 @@ export class ServiceTicketComponent implements OnInit {
     console.log("closing ticket")
     this.customerService.closeServiceTicket(this.ticketDetailsById)
     .subscribe(
-      data => console.log("success!", data),
+      data =>     document.location.reload(false),
       error => this.errorMessage = error.StatusText
     )
   }

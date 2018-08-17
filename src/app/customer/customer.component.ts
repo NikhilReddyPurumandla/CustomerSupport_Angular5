@@ -28,33 +28,30 @@ onSubmit = function(){
  
   this.customerService.saveCustomer(this.customer)
   .subscribe(
-    data => console.log("success!", data),
+    data => document.location.reload(false),
     error => this.errorMessage = error.StatusText
   )
   console.log(event);
-  document.location.reload(false)
  };
 
  onSubmitTicket = function(){
   this.serviceRequest['accountid'] = this.customerdetailsById.id;
   this.customerService.addServiceTicket(this.serviceRequest)
   .subscribe(
-    data => console.log("success!", data),
+    data =>   document.location.reload(false),
     error => this.errorMessage = error.StatusText
   )
   console.log(event);
-  document.location.reload(false)
  };
 
  onEdit = function(){
   this.customer['accountid'] = this.customerdetailsById.id;
   this.customerService.updateCustomerDetails(this.customerdetailsById)
   .subscribe(
-    data => console.log("success!", data),
+    data =>  document.location.reload(false),
     error => this.errorMessage = error.StatusText
   )
   console.log(event);
-  document.location.reload(false)
  };
 
  customerData =  this.customerService.getAllCustomer()

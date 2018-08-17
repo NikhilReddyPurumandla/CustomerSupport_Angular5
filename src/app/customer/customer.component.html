@@ -21,11 +21,9 @@
         <table datatable class='table table-hover table-bordered table-striped'>
                 <thead>
                 <tr class='active'>
-                    <td> ID </td>
+                    <td>AccountId</td>
                     <td>Name</td>
                     <td>Address</td>
-                    <td>State</td>
-                    <td>ZipCode</td>
                     <td>Email</td>
                     <td>Phone</td>
                     <td>Edit Details</td>
@@ -34,12 +32,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let details of customerDetails; index as i">
-                        <td>{{i+1}}</td>
+                    <tr *ngFor="let details of customerDetails">
+                        <td>{{details.id}}</td>
                         <td>{{details.name}}</td>
-                        <td>{{details.houseNo}},{{details.street}},{{details.city}}</td>
-                        <td>{{details.state}}</td>
-                        <td>{{details.zipCode}}</td>
+                        <td>{{details.houseNo}},{{details.street}},{{details.city}},{{details.state}},{{details.zipCode}}</td>
                         <td>{{details.email}}</td>
                         <td>{{details.phone}}</td>
                         <td><i class="fa fa-edit" style="color:inherit" (click)="getCustomer(details.id,'id03')"  ></i></td>
